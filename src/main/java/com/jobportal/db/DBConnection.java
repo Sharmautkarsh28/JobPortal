@@ -10,7 +10,7 @@ public class DBConnection {
         try {
             if (conn == null || conn.isClosed()) {
                 Class.forName("com.mysql.cj.jdbc.Driver");
-                conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/jobportal", "root", "2992003@utkarsh");
+                conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/jobportal", "root", "Enter your workbench password");
             }
         } catch (Exception e) {
             e.printStackTrace();
