@@ -1,0 +1,28 @@
+CREATE DATABASE JOBPORTAL;
+
+USE JOBPORTAL;
+
+CREATE TABLE users (
+    id INT PRIMARY KEY AUTO_INCREMENT,  
+    name VARCHAR(100),                   
+    email VARCHAR(100) ,           
+    password VARCHAR(255)      
+);
+
+-- Creating the 'jobs' table
+CREATE TABLE jobs (
+    id INT PRIMARY KEY AUTO_INCREMENT,  
+    title VARCHAR(100),                 
+    company VARCHAR(100),                
+    location VARCHAR(100),              
+    description TEXT                     
+);
+
+-- Creating the 'applications' table (linking users to jobs)
+CREATE TABLE applications (
+    id INT PRIMARY KEY AUTO_INCREMENT, 
+    user_id INT,                       
+    job_id INT,                         
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (job_id) REFERENCES jobs(id)
+);
