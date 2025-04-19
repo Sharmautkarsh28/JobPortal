@@ -1,4 +1,3 @@
-<!-- application-success.jsp -->
 <!DOCTYPE html>
 <html>
 <head>
